@@ -17,6 +17,8 @@ Node-RED is made available under the terms of the Apache 2 license. It's importa
 
 ### <Макс> 4) Создание ВМ на CentOS и установка Node-RED и автоматический запуск сервиса (автозагрузка) через systemctl
 
+`ssh-keygen -t rsa -b 2048`
+
 ### <Макс> 5) Детальная настройка Yandex IoT Core: создание реестра, устройста и id/логины/пароли
 
 ### <Макс> 6) Создание приложения в Node-Red (MQTT-nodes-out-in, function, dashboard)
