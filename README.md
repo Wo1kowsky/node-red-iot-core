@@ -17,7 +17,20 @@ Node-RED is made available under the terms of the Apache 2 license. It's importa
 
 ### <Макс> 4) Создание ВМ на CentOS и установка Node-RED и автоматический запуск сервиса (автозагрузка) через systemctl
 
-`ssh-keygen -t rsa -b 2048`
+#### Создание ВМ
+Для создания виртуальной машины, на которой далее запустим Node-RED, зайдем в [Яндекс Облако](https://cloud.yandex.ru/) и перейдем в [Консоль](https://console.cloud.yandex.ru/).
+В сервисе *Compute Cloud* нажимаем **Создать ВМ**.
+
+    - скрины с инструкициями
+    - создание ключа для ssh
+    `ssh-keygen -t rsa -b 2048`
+
+- подключение к ВМ
+`ssh admin@84.201.181.46`
+
+
+- установка Node-RED
+
 
 ### <Макс> 5) Детальная настройка Yandex IoT Core: создание реестра, устройста и id/логины/пароли
 
