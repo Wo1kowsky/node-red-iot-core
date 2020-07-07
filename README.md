@@ -56,7 +56,7 @@ $ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/ma
 ```
 $ node-red-start
 ```
-После этого по адресу `http://{ip вашей машины}:1880` в браузере будет доступен для работы Node_RED.
+После этого по адресу `http://{ip вашей машины}:1880` в браузере будет доступен для работы Node-RED.
 ![Запуск Node-RED](screenshots/5_nr_test.png)
 
 *... здесь будет про systemctl или другой способ (команда сверху не работает с sudo)*
