@@ -46,7 +46,7 @@ Node-RED is made available under the terms of the Apache 2 license. It's importa
 ![SSH](screenshots/4_ssh.png)
 
 #### Установка Node-RED
-Наконец, мы можем установить Node-RED. Самый удобный способ для новой, пустой системы - это [Linux installers for Node_RED](https://github.com/node-red/linux-installers)
+Наконец, мы можем установить Node-RED. Самый удобный способ для новой, пустой системы - это [Linux installers for Node-RED](https://github.com/node-red/linux-installers)
 из репозитория данного проекта. Так как мы используем *CentOS 8*, нам необходима вторая команда для ОС, основанных на RPM:
 ```
 $ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/rpm/update-nodejs-and-nodered)
