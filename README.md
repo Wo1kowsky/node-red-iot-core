@@ -50,12 +50,37 @@ Node-RED is made available under the terms of the Apache 2 license. It's importa
 из репозитория данного проекта. Так как мы используем *CentOS 8*, нам необходима вторая команда для ОС, основанных на RPM:
 ```
 $ bash <(curl -sL https://raw.githubusercontent.com/node-red/linux-installers/master/rpm/update-nodejs-and-nodered)
+
+...
+  Stop Node-RED                       ✔
+  Install Node.js LTS                 ✔   Node v10.19.0   Npm 6.13.4
+  Install Node-RED core               ✔   1.1.2 
+  Add shortcut commands               ✔
+  Update systemd script               ✔
+  Update public zone firewall rule    ✔
+                                      
+
+Any errors will be logged to   /var/log/nodered-install.log
+All done.
+  You can now start Node-RED with the command  node-red-start
+  Then point your browser to localhost:1880 or http://{your_pi_ip-address}:1880
+...
 ```
 
-Соглашаясь с предупреждениями о порте 1880 и установке node.js, наблюдаем за установкой. Убедимся, что установка выполнена успешно запуском Node-RED:
+Скрипт установит LTS версию Node.js, базовую версию Node-RED, создаст скрипт автозапуска для systemd и по желанию создаст правила для порта 1880 в firewall. Для проверки успешности установки можно запустить:
+
 ```
 $ node-red-start
 ```
+
+**Примечание:** для выхода из Node-RED нажмите Ctrl+C
+
+Для ативации автозапуска и старта службы с помощью systemctl выполните:
+
+```
+$ sudo systemctl enable --now nodered.service
+```
+
 После этого по адресу `http://{ip вашей машины}:1880` в браузере будет доступен для работы Node-RED.
 ![Запуск Node-RED](screenshots/5_nr_test.png)
 
