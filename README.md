@@ -1,6 +1,4 @@
-# node-red-iot-core
-
-## Node-RED для Yandex IoT Core (рабочее название)
+# Node-RED для Yandex IoT Core (рабочее название)
 
 
 План статьи на базе так называемой техники STAR - начиная с описания ситуации и задачи (ST = Situation/Task), потом с действий, которые вы сделали (A = Actions) и заканчивая результатами (R = Results):
