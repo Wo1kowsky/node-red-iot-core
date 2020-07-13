@@ -18,6 +18,10 @@
 
 Как гласит первоисточник, ![Node-RED](https://nodered.org/about/) - это инструмент потокового программирования, первоначально разработанный командой ![IBM Emerging Technology Services](https://emerging-technology.co.uk/) и в настоящее время являющийся частью ![JS Foundation](https://openjsf.org/).
 
+В качестве ключевой составляющей Node-RED выступает потоковое программирование, которое было изобретено в в 1970-х годах Дж. Полом Моррисоном. Потоковое программирование - это способ описания поведения приложения в виде сети чёрных ящиков или «узлов», как они называются в Node-RED. Каждый узел имеет четко определенную цель - к нему поступают некоторые данные, он что-то делает с этими данными, а затем передает эти данные дальше. Сеть отвечает за поток данных между узлами.
+Эта модель очень хорошо подходит для визуального представления и делает ее более доступной для широкого круга пользователей. Если кто-то пытается разобраться в проблеме, он может разбить задачу на отдельные шаги, взглянуть на поток и понять, что он делает без необходимости разбираться в отдельных строках кода на каждом узле.
+
+
 Node-RED is made available under the terms of the Apache 2 license. It's important to understand the terms of that license, but this provides a good summary - https://tldrlegal.com/license/apache-license-2.0-(apache-2.0) The license allows for commercial usage. The main restrictions are: they cannot misrepresent the Node-RED trademark (which belongs to the OpenJS Foundation) and they cannot hold the project liable for anything they chose to do with it.
 
 ### <Вит> 3) Постановка задачи - интеграция Node-RED c Yandex IoT Core для создания прототипа приложения "Умное ЖКХ" или "Самоуправляемые Автомобили" лизнуть Яндексу (вставить любое)
