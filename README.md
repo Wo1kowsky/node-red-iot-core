@@ -16,7 +16,7 @@
 
 ### 2) Кратко о Node-Red, его истории, создателях (Nicholas O'Leary/UK/IBM) и сообществе
 
-Node-RED is a flow-based programming tool, originally developed by IBM’s Emerging Technology Services team and now a part of the JS Foundation.
+Как гласит первоисточник ![Node-RED](https://nodered.org/about/) - это инструмент потокового программирования, первоначально разработанный командой ![IBM Emerging Technology Services](https://emerging-technology.co.uk/) и в настоящее время являющийся частью ![JS Foundation](https://openjsf.org/).
 
 Node-RED is made available under the terms of the Apache 2 license. It's important to understand the terms of that license, but this provides a good summary - https://tldrlegal.com/license/apache-license-2.0-(apache-2.0) The license allows for commercial usage. The main restrictions are: they cannot misrepresent the Node-RED trademark (which belongs to the OpenJS Foundation) and they cannot hold the project liable for anything they chose to do with it.
 
