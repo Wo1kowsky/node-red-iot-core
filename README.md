@@ -7,16 +7,18 @@
 
 
 
-### 1) Визуальное программирование для Интеренета Вещей и событийных приложений с малым количеством кода (Node-RED)
+### Визуальное программирование для Интеренета Вещей и событийных приложений с малым количеством кода (Node-RED)
 
 Написано уже немало статей на тему использования средств визуального программирования при создании приложений для Интеренета Вещей (![один](https://habr.com/ru/post/396985/), ![два](https://habr.com/ru/company/tinkoff/blog/487984/), ![три](https://habr.com/ru/company/tinkoff/blog/489774/)), управления разнообразными устройствами и домашней автоматизации. Однако мало кто упоминает о другом полезном свойстве подобных иструментов - это быстрое прототипирование, то есть эмуляция самих устройств и визуализация результатов их работы без грубоких познаний в программировании или веб-дизайне.
 
 В этой статье хотелось бы разобрать один из наиболее популярных инструментов с открытым исходным кодом - Node-RED с точки зрения создания простых прототипов приложений с минимум программирования, проверить гипотезу о простоте и удобстве таких средств, а также рассмотреть его взаимодействие с облачной платформой в отрыве от его родной IBM Cloud.
 
+<еще подумаю...>
 
-### 2) Кратко о Node-Red, его истории, создателях (Nicholas O'Leary/UK/IBM) и сообществе
 
-Как гласит первоисточник ![Node-RED](https://nodered.org/about/) - это инструмент потокового программирования, первоначально разработанный командой ![IBM Emerging Technology Services](https://emerging-technology.co.uk/) и в настоящее время являющийся частью ![JS Foundation](https://openjsf.org/).
+### Кратко о Node-Red, его истории, создателях (Nicholas O'Leary/UK/IBM) и сообществе
+
+Как гласит первоисточник, ![Node-RED](https://nodered.org/about/) - это инструмент потокового программирования, первоначально разработанный командой ![IBM Emerging Technology Services](https://emerging-technology.co.uk/) и в настоящее время являющийся частью ![JS Foundation](https://openjsf.org/).
 
 Node-RED is made available under the terms of the Apache 2 license. It's important to understand the terms of that license, but this provides a good summary - https://tldrlegal.com/license/apache-license-2.0-(apache-2.0) The license allows for commercial usage. The main restrictions are: they cannot misrepresent the Node-RED trademark (which belongs to the OpenJS Foundation) and they cannot hold the project liable for anything they chose to do with it.
 
