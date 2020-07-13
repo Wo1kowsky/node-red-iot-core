@@ -14,7 +14,7 @@
 <еще подумаю...>
 
 
-### Кратко о Node-Red, его истории, создателях (Nicholas O'Leary/UK/IBM) и сообществе
+### Кратко о Node-Red, его истории, создателях и сообществе
 
 Как гласит первоисточник, ![Node-RED](https://nodered.org/about/) - это инструмент потокового программирования, первоначально разработанный командой ![IBM Emerging Technology Services](https://emerging-technology.co.uk/) и в настоящее время являющийся частью ![JS Foundation](https://openjsf.org/).
 
