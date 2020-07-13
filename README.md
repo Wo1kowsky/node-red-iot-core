@@ -22,7 +22,7 @@
 Эта модель очень хорошо подходит для визуального представления и делает ее более доступной для широкого круга пользователей. Если кто-то пытается разобраться в проблеме, он может разбить задачу на отдельные шаги, взглянуть на поток и понять, что он делает без необходимости разбираться в отдельных строках кода на каждом узле.
 
 Node-RED работает в среде исполнения Node.js, а для создания или редактирования потока ("Flow") используется веб-браузер. В браузере вы можете создавать свое приложение путем перетаскивания необходимых узлов ("Node") из палитры в рабочую область и соединять их вместе. Одним щелчком мыши на кнопке "Deploy" приложение развертывается в среде исполнения и запускается.
-Палитра узлов может быть легко расширена путем установки новых узлов, созданных сообществом, а созданные вами потоки могут быть легко переданы в виде файлов JSON.
+Палитра узлов может быть легко расширена путем установки новых узлов, созданных сообществом, а созданные вами потоки могут быть легко переданы в виде файлов JavaScript Object Notation (JSON).
 
 Node-RED is made available under the terms of the Apache 2 license. It's important to understand the terms of that license, but this provides a good summary - https://tldrlegal.com/license/apache-license-2.0-(apache-2.0) The license allows for commercial usage. The main restrictions are: they cannot misrepresent the Node-RED trademark (which belongs to the OpenJS Foundation) and they cannot hold the project liable for anything they chose to do with it.
 
