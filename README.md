@@ -25,7 +25,7 @@ Node-RED работает в среде исполнения Node.js, а для 
 Палитра узлов может быть легко расширена путем установки новых узлов, созданных сообществом, а созданные вами потоки могут быть легко переданы в виде файлов JavaScript Object Notation (JSON).
 
 Node-RED начал свою жизнь в начале 2013 года как совместный проект Ника О'Лири (Nick O’Leary) и Дейва Конвея-Джонса (Dave Conway-Jones) из группы IBM Emerging Technology Services.
-Проект начинался как подтверждение концепции визуализации и манипулирования мэппингами между топиками Message Queuing Telemetry Transport (MQTT), быстро стало более универсальным инструментом, который можно было легко расширять в любом направлении.
+Проект начинался как подтверждение концепции визуализации и манипулирования мэппингами между топиками Message Queuing Telemetry Transport (MQTT), быстро стал более универсальным инструментом, который можно было легко расширять в любом направлении.
 Исходный код проекта был открыт в сентябре 2013 года и с тех пор он разрабатывался в открытом виде, кульминацией развития стало признание Node-RED одним из фунламентальных проектов JS Foundation в октябре 2016 года.
 
 Node-RED is made available under the terms of the Apache 2 license. It's important to understand the terms of that license, but this provides a good summary - https://tldrlegal.com/license/apache-license-2.0-(apache-2.0) The license allows for commercial usage. The main restrictions are: they cannot misrepresent the Node-RED trademark (which belongs to the OpenJS Foundation) and they cannot hold the project liable for anything they chose to do with it.
