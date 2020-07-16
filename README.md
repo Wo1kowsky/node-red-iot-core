@@ -194,6 +194,7 @@ Node-RED действительно скачать может любой жел�
 - Как начать с Node-Red (ENG), включая другие облачные среды: https://nodered.org/docs/getting-started/
 - Node-RED гостит у папы (ENG): https://developer.ibm.com/components/node-red/
 - Рецепты по Node-RED в IBM (ENG): https://developer.ibm.com/recipes/tag/node-red/
+- Видео от создателей (ENG+RUS-Subs): https://youtu.be/vYreeoCoQPI
 
 Отдельное спасибо за помощь при создании статьи: <...>
 
