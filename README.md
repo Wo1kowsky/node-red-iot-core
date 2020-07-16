@@ -182,10 +182,12 @@ Node-RED действительно скачать может любой жел�
 
 ## Ссылки на полезные материалы
 
-Документация проекта Node-RED (ENG): https://nodered.org/docs/
-Книга рецептов (ENG): https://cookbook.nodered.org/
-Как начать с Node-Red (ENG), включая другие облачные среды: https://nodered.org/docs/getting-started/
-
+- Node-Red на GitHub: https://github.com/node-red/
+- Документация проекта Node-RED (ENG): https://nodered.org/docs/
+- Книга рецептов (ENG): https://cookbook.nodered.org/
+- Как начать с Node-Red (ENG), включая другие облачные среды: https://nodered.org/docs/getting-started/
+- Node-RED гостит у папы (ENG): https://developer.ibm.com/components/node-red/
+- Рецепты по Node-RED в IBM (ENG): https://developer.ibm.com/recipes/tag/node-red/
 
 Отдельное спасибо за помощь при создании статьи: <...>
 
