@@ -1,163 +1,129 @@
 [
     {
-        "id": "b522b21d.ddf1f",
+        "id": "8578c92a.ca7f48",
         "type": "tab",
         "label": "Smart Utitities",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "6b593ed3.9a255",
-        "type": "inject",
-        "z": "b522b21d.ddf1f",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "/worldmap",
-        "payloadType": "str",
-        "x": 610,
-        "y": 660,
-        "wires": [
-            [
-                "627ff7b.1e64808"
-            ]
-        ]
-    },
-    {
-        "id": "627ff7b.1e64808",
-        "type": "template",
-        "z": "b522b21d.ddf1f",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<iframe src={{{payload}}} height=400px width=400px></iframe>",
-        "x": 800,
-        "y": 660,
-        "wires": [
-            [
-                "4eda3c37.df3d14"
-            ]
-        ]
-    },
-    {
-        "id": "6f78b404.9d0d6c",
+        "id": "ed4d1064.f69ee",
         "type": "comment",
-        "z": "b522b21d.ddf1f",
+        "z": "8578c92a.ca7f48",
         "name": "Embed Map in Dashboard",
         "info": "",
-        "x": 630,
-        "y": 500,
+        "x": 690,
+        "y": 120,
         "wires": []
     },
     {
-        "id": "a7373cdb.5e99b",
+        "id": "d0cffd0f.b2e",
         "type": "json",
-        "z": "b522b21d.ddf1f",
+        "z": "8578c92a.ca7f48",
         "name": "",
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 350,
-        "y": 400,
+        "x": 450,
+        "y": 280,
         "wires": [
             [
-                "ef0cbd5a.b812d",
-                "76697a8c.4defe4"
+                "d404c286.040eb",
+                "ba1e4034.fb924"
             ]
         ]
     },
     {
-        "id": "ef0cbd5a.b812d",
+        "id": "d404c286.040eb",
         "type": "function",
-        "z": "b522b21d.ddf1f",
+        "z": "8578c92a.ca7f48",
         "name": "Parsing JSON",
         "func": "var battery = {};\nvar devid = {};\nvar latitude = {};\nvar longitude = {};\nvar speed = {};\nvar bearing = {};\nbattery.payload = msg.payload.d.battery\ndevid.payload = msg.payload.d.devid\nlatitude.payload = msg.payload.d.latitude\nlongitude.payload = msg.payload.d.longitude\nspeed.payload = msg.payload.d.speed\nbearing.payload = msg.payload.d.bearing\nreturn [battery,devid,latitude,longitude,speed,bearing];",
         "outputs": 6,
         "noerr": 0,
-        "x": 640,
-        "y": 400,
+        "initialize": "",
+        "finalize": "",
+        "x": 700,
+        "y": 280,
         "wires": [
             [
-                "915141f2.5ab5c"
+                "fa695a0d.bba268"
             ],
             [
-                "22620f27.302"
+                "465b9877.e7d758"
             ],
             [
-                "610d3c53.0c26a4"
+                "468d0285.45f1ac"
             ],
             [
-                "528673b9.bce4dc"
+                "e6c9cae8.99bda8"
             ],
             [
-                "772f1210.ce2b6c",
-                "8b6bdfd0.1c494",
-                "75526b62.528254"
+                "99e988c0.56f5f8",
+                "e2eae85a.faefd8",
+                "a78f8799.cdb208"
             ],
             [
-                "c6640485.1fa668",
-                "b9698467.f49248",
-                "1cf51dc6.7cb7b2"
+                "e4253770.b463b8",
+                "2234b33a.2371fc",
+                "5b3da63d.569918"
             ]
         ]
     },
     {
-        "id": "610d3c53.0c26a4",
+        "id": "468d0285.45f1ac",
         "type": "ui_text",
-        "z": "b522b21d.ddf1f",
-        "group": "6d92af23.d2c37",
+        "z": "8578c92a.ca7f48",
+        "group": "557b8378.86d8bc",
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "Latitude",
-        "label": "Latitude:",
+        "name": "Ширина",
+        "label": "Ширина:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 965.4999313354492,
-        "y": 326.00000381469727,
+        "x": 960,
+        "y": 180,
         "wires": []
     },
     {
-        "id": "528673b9.bce4dc",
+        "id": "e6c9cae8.99bda8",
         "type": "ui_text",
-        "z": "b522b21d.ddf1f",
-        "group": "6d92af23.d2c37",
+        "z": "8578c92a.ca7f48",
+        "group": "557b8378.86d8bc",
         "order": 2,
         "width": 0,
         "height": 0,
-        "name": "Longitude",
-        "label": "Longitude:",
+        "name": "Долгота",
+        "label": "Долгота:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 965.4999313354492,
-        "y": 366.00000381469727,
+        "x": 960,
+        "y": 220,
         "wires": []
     },
     {
-        "id": "76697a8c.4defe4",
+        "id": "ba1e4034.fb924",
         "type": "function",
-        "z": "b522b21d.ddf1f",
+        "z": "8578c92a.ca7f48",
         "name": "JSON",
-        "func": "var speed = {};\nvar bearing = {};\nvar latitude = {};\nvar longitude = {};\nspeed = msg.payload.d.speed\nbearing = msg.payload.d.bearing\nlatitude = msg.payload.d.latitude\nlongitude = msg.payload.d.longitude\n// create random position\n//var lat = 51 + Math.random() * 0.2;\n//var lon = -1.45 + Math.random() * 0.2;\n//msg.payload={lat:lat, lon:lon, name:\"Mike\", icon:\"male\", url:\"<a href=\\\"/red/ui/#/0\\\">IBM link</a>\"};\nmsg.payload={speed, bearing, lat:latitude, lon:longitude, name:\"Устройство\", icon:\"car\", iconColor:\"blue\", url:\"<a href=\\\"/worldmap\\\" target=\\\"_blank\\\">Global Map</a>\"};\nreturn msg;",
+        "func": "var speed = {};\nvar bearing = {};\nvar latitude = {};\nvar longitude = {};\nspeed = msg.payload.d.speed\nbearing = msg.payload.d.bearing\nlatitude = msg.payload.d.latitude\nlongitude = msg.payload.d.longitude\nmsg.payload={speed, bearing, lat:latitude, lon:longitude, name:\"Устройство\", icon:\"car\", iconColor:\"blue\", url:\"<a href=\\\"/worldmap\\\" target=\\\"_blank\\\">Global Map</a>\"};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
         "x": 610,
-        "y": 560,
+        "y": 160,
         "wires": [
             [
-                "3d7ec7fa.6ece88"
+                "7e5dee09.9226c"
             ]
         ]
     },
     {
-        "id": "3d7ec7fa.6ece88",
+        "id": "7e5dee09.9226c",
         "type": "worldmap",
-        "z": "b522b21d.ddf1f",
+        "z": "8578c92a.ca7f48",
         "name": "",
         "lat": "",
         "lon": "",
@@ -167,20 +133,23 @@
         "maxage": "",
         "usermenu": "hide",
         "panit": "true",
-        "x": 750,
-        "y": 560,
+        "hiderightclick": "false",
+        "coords": "none",
+        "path": "",
+        "x": 760,
+        "y": 160,
         "wires": []
     },
     {
-        "id": "b9698467.f49248",
+        "id": "2234b33a.2371fc",
         "type": "ui_chart",
-        "z": "b522b21d.ddf1f",
-        "name": "Graph - Bearing Data",
-        "group": "2a56b81e.7e43c8",
+        "z": "8578c92a.ca7f48",
+        "name": "Направление",
+        "group": "8931f16f.c5c2e",
         "order": 5,
         "width": "8",
         "height": "4",
-        "label": "Graph - Bearing Data",
+        "label": "Направление",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -194,6 +163,7 @@
         "removeOlderUnit": "60",
         "cutout": "",
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -206,25 +176,24 @@
             "#c5b0d5"
         ],
         "useOldStyle": true,
-        "outputs": 2,
-        "x": 1008.7005233764648,
-        "y": 239.0833225250244,
+        "outputs": 1,
+        "x": 980,
+        "y": 460,
         "wires": [
-            [],
             []
         ]
     },
     {
-        "id": "c6640485.1fa668",
+        "id": "e4253770.b463b8",
         "type": "ui_gauge",
-        "z": "b522b21d.ddf1f",
-        "name": "Bearing Data",
-        "group": "2a56b81e.7e43c8",
+        "z": "8578c92a.ca7f48",
+        "name": "Направление",
+        "group": "8931f16f.c5c2e",
         "order": 4,
         "width": "4",
         "height": "4",
         "gtype": "compass",
-        "title": "Bearing Data",
+        "title": "Направление",
         "label": "azimuth",
         "format": "{{value}}",
         "min": "0",
@@ -236,21 +205,21 @@
         ],
         "seg1": "120",
         "seg2": "240",
-        "x": 978.7005233764648,
-        "y": 200.08327865600586,
+        "x": 980,
+        "y": 420,
         "wires": []
     },
     {
-        "id": "772f1210.ce2b6c",
+        "id": "99e988c0.56f5f8",
         "type": "ui_gauge",
-        "z": "b522b21d.ddf1f",
-        "name": "Speed",
-        "group": "2a56b81e.7e43c8",
+        "z": "8578c92a.ca7f48",
+        "name": "Скорость",
+        "group": "8931f16f.c5c2e",
         "order": 1,
         "width": "4",
         "height": "4",
         "gtype": "gage",
-        "title": "Speed",
+        "title": "Скорость",
         "label": "km/h",
         "format": "{{value}}",
         "min": "0",
@@ -262,55 +231,36 @@
         ],
         "seg1": "30",
         "seg2": "70",
-        "x": 955.4999313354492,
-        "y": 408.50000381469727,
+        "x": 960,
+        "y": 262.5,
         "wires": []
     },
     {
-        "id": "22620f27.302",
+        "id": "465b9877.e7d758",
         "type": "ui_text",
-        "z": "b522b21d.ddf1f",
-        "group": "495df01d.ea2ba",
+        "z": "8578c92a.ca7f48",
+        "group": "1ad6358e.1d7cea",
         "order": 2,
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Device:",
+        "label": "Устройство:",
         "format": "{{msg.payload}}",
         "layout": "row-center",
-        "x": 968,
-        "y": 149.75,
+        "x": 970,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "4eda3c37.df3d14",
-        "type": "ui_template",
-        "z": "b522b21d.ddf1f",
-        "group": "495df01d.ea2ba",
-        "name": "",
-        "order": 1,
-        "width": "8",
-        "height": "8",
-        "format": "<div ng-bind-html=\"msg.payload | trusted\"></div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "templateScope": "local",
-        "x": 980,
-        "y": 660,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "8b6bdfd0.1c494",
+        "id": "e2eae85a.faefd8",
         "type": "ui_chart",
-        "z": "b522b21d.ddf1f",
-        "name": "Graph - Speed",
-        "group": "2a56b81e.7e43c8",
+        "z": "8578c92a.ca7f48",
+        "name": "Скорость",
+        "group": "8931f16f.c5c2e",
         "order": 2,
         "width": "8",
         "height": "4",
-        "label": "Graph - Speed",
+        "label": "Скорость",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -324,6 +274,7 @@
         "removeOlderUnit": "60",
         "cutout": "",
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -336,52 +287,51 @@
             "#c5b0d5"
         ],
         "useOldStyle": true,
-        "outputs": 2,
-        "x": 986.4999313354492,
-        "y": 448.50012588500977,
+        "outputs": 1,
+        "x": 960,
+        "y": 300,
         "wires": [
-            [],
             []
         ]
     },
     {
-        "id": "75526b62.528254",
+        "id": "a78f8799.cdb208",
         "type": "ui_text",
-        "z": "b522b21d.ddf1f",
-        "group": "6d92af23.d2c37",
+        "z": "8578c92a.ca7f48",
+        "group": "557b8378.86d8bc",
         "order": 3,
         "width": 0,
         "height": 0,
-        "name": "Speed",
-        "label": "Speed",
+        "name": "Скорость",
+        "label": "Скорость",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 954.8748626708984,
-        "y": 494.75000762939453,
+        "x": 960,
+        "y": 340,
         "wires": []
     },
     {
-        "id": "1cf51dc6.7cb7b2",
+        "id": "5b3da63d.569918",
         "type": "ui_text",
-        "z": "b522b21d.ddf1f",
-        "group": "6d92af23.d2c37",
+        "z": "8578c92a.ca7f48",
+        "group": "557b8378.86d8bc",
         "order": 4,
         "width": 0,
         "height": 0,
-        "name": "Bearing",
-        "label": "Bearing",
+        "name": "Направление",
+        "label": "Направление",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 967.3749313354492,
-        "y": 281.00000381469727,
+        "x": 980,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "915141f2.5ab5c",
+        "id": "fa695a0d.bba268",
         "type": "ui_gauge",
-        "z": "b522b21d.ddf1f",
-        "name": "Fuel / Battery",
-        "group": "81c86bc6.045c38",
+        "z": "8578c92a.ca7f48",
+        "name": "Топливо/Заряд",
+        "group": "5e821d9b.6c9ef4",
         "order": 1,
         "width": "0",
         "height": "0",
@@ -398,32 +348,14 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 988.625,
-        "y": 99.75,
+        "x": 980,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "3d47a7df.f6e9e8",
-        "type": "mqtt in",
-        "z": "b522b21d.ddf1f",
-        "name": "registry",
-        "topic": "$registries/<id_реестра>/events",
-        "qos": "1",
-        "datatype": "auto",
-        "broker": "a60d48dd.8b6188",
-        "x": 50,
-        "y": 400,
-        "wires": [
-            [
-                "68ef242c.df66dc",
-                "a7373cdb.5e99b"
-            ]
-        ]
-    },
-    {
-        "id": "68ef242c.df66dc",
+        "id": "81a41232.f1513",
         "type": "debug",
-        "z": "b522b21d.ddf1f",
+        "z": "8578c92a.ca7f48",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -431,56 +363,142 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 350,
-        "y": 480,
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 430,
+        "y": 160,
         "wires": []
     },
     {
-        "id": "6d92af23.d2c37",
+        "id": "89dffaad.512b58",
+        "type": "ui_template",
+        "z": "8578c92a.ca7f48",
+        "group": "1ad6358e.1d7cea",
+        "name": "",
+        "order": 1,
+        "width": "8",
+        "height": "8",
+        "format": "<div ng-bind-html=\"msg.payload | trusted\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 960,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a18c4c6.af856b",
+        "type": "template",
+        "z": "8578c92a.ca7f48",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<iframe src={{{payload}}} height=400px width=400px></iframe>",
+        "x": 680,
+        "y": 420,
+        "wires": [
+            [
+                "89dffaad.512b58"
+            ]
+        ]
+    },
+    {
+        "id": "d5244ec1.a5649",
+        "type": "inject",
+        "z": "8578c92a.ca7f48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "/worldmap",
+        "payloadType": "str",
+        "x": 470,
+        "y": 420,
+        "wires": [
+            [
+                "a18c4c6.af856b"
+            ]
+        ]
+    },
+    {
+        "id": "baf55a37.5758b8",
+        "type": "mqtt in",
+        "z": "8578c92a.ca7f48",
+        "name": "registry",
+        "topic": "$registries/<id_реестра>/events",
+        "qos": "1",
+        "datatype": "auto",
+        "broker": "cd69578e.dfb498",
+        "x": 290,
+        "y": 280,
+        "wires": [
+            [
+                "81a41232.f1513",
+                "d0cffd0f.b2e"
+            ]
+        ]
+    },
+    {
+        "id": "557b8378.86d8bc",
         "type": "ui_group",
         "z": "",
-        "name": "Geo Location",
-        "tab": "e75b54d3.e7cb28",
+        "name": "Геолокация",
+        "tab": "950f9927.0259c8",
         "order": 3,
         "disp": true,
         "width": "5",
         "collapse": false
     },
     {
-        "id": "2a56b81e.7e43c8",
+        "id": "8931f16f.c5c2e",
         "type": "ui_group",
         "z": "",
-        "name": "Device Data",
-        "tab": "e75b54d3.e7cb28",
+        "name": "Устройство",
+        "tab": "950f9927.0259c8",
         "order": 2,
         "disp": true,
         "width": "12",
         "collapse": false
     },
     {
-        "id": "495df01d.ea2ba",
+        "id": "1ad6358e.1d7cea",
         "type": "ui_group",
         "z": "",
-        "name": "Interactive Map",
-        "tab": "e75b54d3.e7cb28",
+        "name": "Карта",
+        "tab": "950f9927.0259c8",
         "order": 1,
         "disp": true,
         "width": "8",
         "collapse": false
     },
     {
-        "id": "81c86bc6.045c38",
+        "id": "5e821d9b.6c9ef4",
         "type": "ui_group",
         "z": "",
-        "name": "Fuel / Battery Status",
-        "tab": "e75b54d3.e7cb28",
+        "name": "Топливо/Заряд",
+        "tab": "950f9927.0259c8",
         "order": 4,
         "disp": true,
         "width": "5",
         "collapse": false
     },
     {
-        "id": "a60d48dd.8b6188",
+        "id": "cd69578e.dfb498",
         "type": "mqtt-broker",
         "z": "",
         "name": "iot-core-subscription",
@@ -503,11 +521,13 @@
         "willPayload": ""
     },
     {
-        "id": "e75b54d3.e7cb28",
+        "id": "950f9927.0259c8",
         "type": "ui_tab",
         "z": "",
-        "name": "IBM Edge Demo - City Operational Center",
+        "name": "Подключаемые Автомобили",
         "icon": "star",
-        "order": 1
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     }
 ]
