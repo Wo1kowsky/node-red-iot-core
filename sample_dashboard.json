@@ -12,8 +12,8 @@
         "z": "8578c92a.ca7f48",
         "name": "Embed Map in Dashboard",
         "info": "",
-        "x": 690,
-        "y": 120,
+        "x": 470,
+        "y": 80,
         "wires": []
     },
     {
@@ -24,8 +24,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 450,
-        "y": 280,
+        "x": 230,
+        "y": 240,
         "wires": [
             [
                 "d404c286.040eb",
@@ -43,8 +43,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 700,
-        "y": 280,
+        "x": 480,
+        "y": 240,
         "wires": [
             [
                 "fa695a0d.bba268"
@@ -78,12 +78,12 @@
         "order": 1,
         "width": 0,
         "height": 0,
-        "name": "Ширина",
-        "label": "Ширина:",
+        "name": "Широта",
+        "label": "Широта:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 960,
-        "y": 180,
+        "x": 740,
+        "y": 140,
         "wires": []
     },
     {
@@ -98,8 +98,8 @@
         "label": "Долгота:",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 960,
-        "y": 220,
+        "x": 740,
+        "y": 180,
         "wires": []
     },
     {
@@ -112,8 +112,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 610,
-        "y": 160,
+        "x": 390,
+        "y": 120,
         "wires": [
             [
                 "7e5dee09.9226c"
@@ -136,8 +136,8 @@
         "hiderightclick": "false",
         "coords": "none",
         "path": "",
-        "x": 760,
-        "y": 160,
+        "x": 540,
+        "y": 120,
         "wires": []
     },
     {
@@ -177,8 +177,8 @@
         ],
         "useOldStyle": true,
         "outputs": 1,
-        "x": 980,
-        "y": 460,
+        "x": 760,
+        "y": 420,
         "wires": [
             []
         ]
@@ -205,8 +205,8 @@
         ],
         "seg1": "120",
         "seg2": "240",
-        "x": 980,
-        "y": 420,
+        "x": 760,
+        "y": 380,
         "wires": []
     },
     {
@@ -231,8 +231,8 @@
         ],
         "seg1": "30",
         "seg2": "70",
-        "x": 960,
-        "y": 262.5,
+        "x": 740,
+        "y": 222.5,
         "wires": []
     },
     {
@@ -247,8 +247,8 @@
         "label": "Устройство:",
         "format": "{{msg.payload}}",
         "layout": "row-center",
-        "x": 970,
-        "y": 140,
+        "x": 750,
+        "y": 100,
         "wires": []
     },
     {
@@ -288,8 +288,8 @@
         ],
         "useOldStyle": true,
         "outputs": 1,
-        "x": 960,
-        "y": 300,
+        "x": 740,
+        "y": 260,
         "wires": [
             []
         ]
@@ -306,8 +306,8 @@
         "label": "Скорость",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 960,
-        "y": 340,
+        "x": 740,
+        "y": 300,
         "wires": []
     },
     {
@@ -322,8 +322,8 @@
         "label": "Направление",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "x": 980,
-        "y": 380,
+        "x": 760,
+        "y": 340,
         "wires": []
     },
     {
@@ -348,8 +348,8 @@
         ],
         "seg1": "",
         "seg2": "",
-        "x": 980,
-        "y": 100,
+        "x": 760,
+        "y": 60,
         "wires": []
     },
     {
@@ -365,8 +365,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 430,
-        "y": 160,
+        "x": 210,
+        "y": 120,
         "wires": []
     },
     {
@@ -382,8 +382,8 @@
         "storeOutMessages": true,
         "fwdInMessages": true,
         "templateScope": "local",
-        "x": 960,
-        "y": 500,
+        "x": 740,
+        "y": 460,
         "wires": [
             []
         ]
@@ -398,8 +398,8 @@
         "format": "handlebars",
         "syntax": "mustache",
         "template": "<iframe src={{{payload}}} height=400px width=400px></iframe>",
-        "x": 680,
-        "y": 420,
+        "x": 460,
+        "y": 380,
         "wires": [
             [
                 "89dffaad.512b58"
@@ -427,8 +427,8 @@
         "topic": "",
         "payload": "/worldmap",
         "payloadType": "str",
-        "x": 470,
-        "y": 420,
+        "x": 250,
+        "y": 380,
         "wires": [
             [
                 "a18c4c6.af856b"
@@ -436,7 +436,7 @@
         ]
     },
     {
-        "id": "baf55a37.5758b8",
+        "id": "c6ae2e16.8303f",
         "type": "mqtt in",
         "z": "8578c92a.ca7f48",
         "name": "registry",
@@ -444,8 +444,8 @@
         "qos": "1",
         "datatype": "auto",
         "broker": "cd69578e.dfb498",
-        "x": 290,
-        "y": 280,
+        "x": 50,
+        "y": 240,
         "wires": [
             [
                 "81a41232.f1513",
