@@ -1,72 +1,62 @@
 [
     {
-        "id": "212bc22.fa70f3e",
+        "id": "bbf6d7c6.937b78",
         "type": "tab",
-        "label": "testing connection",
+        "label": "Device",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "bed7411f.9255f",
+        "id": "a8a052eb.958af",
         "type": "mqtt out",
-        "z": "212bc22.fa70f3e",
+        "z": "bbf6d7c6.937b78",
         "name": "device",
         "topic": "$registries/<id_реестра>/events",
         "qos": "1",
         "retain": "",
-        "broker": "4010b52e.78ff3c",
-        "x": 670,
-        "y": 280,
+        "broker": "66c9fe0f.fa37",
+        "x": 610,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "e3583bb3.af06f8",
+        "id": "dd3eaa26.d18508",
         "type": "inject",
-        "z": "212bc22.fa70f3e",
+        "z": "bbf6d7c6.937b78",
         "name": "Send Data",
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
         "repeat": "3",
         "crontab": "",
         "once": false,
         "onceDelay": "",
-        "x": 170,
-        "y": 280,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
+        "y": 140,
         "wires": [
             [
-                "3bc1fecd.619332"
+                "46feee67.7959b"
             ]
         ]
     },
     {
-        "id": "3bc1fecd.619332",
+        "id": "46feee67.7959b",
         "type": "function",
-        "z": "212bc22.fa70f3e",
+        "z": "bbf6d7c6.937b78",
         "name": "Device payload",
         "func": "// Thermostat's location:\nvar longitude1 = [-98.409,-98.408,-98.407,-98.406,-98.405,-98.404,-98.403,-98.402,-98.401,-98.400]\nvar latitude1 = [29.42, 29.43, 29.44, 29.45, 29.46, 29.47, 29.48, 29.49, 29.50, 29.51];\nvar devid1 = ['car1','car1','car1','car1','car1','car1','car1','car1','car1','car1'];\nvar battery = [87,37,82,53,23,72,61,38,7,73]\n// Array of pseudo random values\nvar speed1 = Math.floor(Math.random() * 100);\n\n// Array of pseudo random relative humidities\nvar bearing1 = Math.floor((Math.random() * 40)-20);\n\n// Counter to select from array.\nvar counter1 = context.get('counter1')||0;\ncounter1 = counter1+1;\nif(counter1 > 9) counter1 = 0;\ncontext.set('counter1',counter1);\n\n// Create MQTT message in JSON\nmsg = {\n  payload: JSON.stringify(\n    {\n      d:{\n        \"devid\": devid1[counter1],\n        \"speed\" : speed1,\n        \"bearing\" : bearing1,\n        \"battery\" : battery[counter1],\n        \"longitude\" : longitude1[counter1],\n        \"latitude\" : latitude1[counter1]\n      }\n    }\n  )\n};\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
-        "x": 420,
-        "y": 280,
+        "x": 360,
+        "y": 140,
         "wires": [
             [
-                "bed7411f.9255f"
+                "a8a052eb.958af"
             ]
         ]
     },
     {
-        "id": "8f599caf.f1118",
-        "type": "comment",
-        "z": "212bc22.fa70f3e",
-        "name": "Sensors data simulation",
-        "info": "",
-        "x": 400,
-        "y": 160,
-        "wires": []
-    },
-    {
-        "id": "4010b52e.78ff3c",
+        "id": "66c9fe0f.fa37",
         "type": "mqtt-broker",
         "z": "",
         "name": "iot-core-device",
